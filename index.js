@@ -10,6 +10,11 @@ const parseREPD = () => {
   const json = parse(csv, {
     columns: true,
     from_line: 1,
+    cast: function (value, context) {
+      if (context.column === 'No. of Turbines') {
+        return parseInt(`${value}`)
+      } else return `${value}`
+    },
   })
   const geojson_OSGB = GeoJSON.parse(json, {
     Point: ['Y-coordinate', 'X-coordinate'],
