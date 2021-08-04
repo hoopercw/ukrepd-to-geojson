@@ -1,0 +1,19 @@
+{
+  "name": "ukrepd-to-geojson",
+  "version": "0.1.0",
+  "description": "Converts the UK Renewable Energy Planning Database (REPD) from CSV to GeoJSON format.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoopercw/ukrepd-to-geojson.git"
+  },
+  "author": "Chris Hooper",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/hoopercw/ukrepd-to-geojson/issues"
+  },
+  "homepage": "https://github.com/hoopercw/ukrepd-to-geojson#readme"
+}
