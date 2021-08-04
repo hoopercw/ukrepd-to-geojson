@@ -13,6 +13,18 @@ const parseREPD = () => {
     cast: function (value, context) {
       if (context.column === 'No. of Turbines') {
         return parseInt(`${value}`)
+      } else if (context.column === 'Installed Capacity (MWelec)') {
+        return parseFloat(`${value}`)
+      } else if (context.column === 'RO Banding (ROC/MWh)') {
+        return parseFloat(`${value}`)
+      } else if (context.column === 'FiT Tariff (p/kWh)') {
+        return parseFloat(`${value}`)
+      } else if (context.column === 'CfD Capacity (MW)') {
+        return parseFloat(`${value}`)
+      } else if (context.column === 'Turbine Capacity (MW)') {
+        return parseFloat(`${value}`)
+      } else if (context.column === 'Height of Turbines (m)') {
+        return parseFloat(`${value}`)
       } else return `${value}`
     },
   })
