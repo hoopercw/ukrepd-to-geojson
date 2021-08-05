@@ -25,6 +25,12 @@ const parseREPD = () => {
         return parseFloat(`${value}`)
       } else if (context.column === 'Height of Turbines (m)') {
         return parseFloat(`${value}`)
+      } else if (context.column === 'Planning Application Submitted') {
+        dateStr = `${value}`.split('/')
+        dateJSON = new Date(
+          Date.UTC(dateStr[2], dateStr[1] - 1, dateStr[0])
+        ).toJSON()
+        return dateJSON
       } else return `${value}`
     },
   })
