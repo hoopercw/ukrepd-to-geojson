@@ -11,7 +11,13 @@ const parseREPD = () => {
     columns: true,
     from_line: 1,
     cast: function (value, context) {
-      if (context.column === 'No. of Turbines') {
+      if (context.column === 'Record Last Updated (dd/mm/yyyy)') {
+        dateStr = `${value}`.split('/')
+        dateJSON = new Date(
+          Date.UTC(dateStr[2], dateStr[1] - 1, dateStr[0])
+        ).toJSON()
+        return dateJSON
+      } else if (context.column === 'No. of Turbines') {
         return parseInt(`${value}`)
       } else if (context.column === 'Installed Capacity (MWelec)') {
         return parseFloat(`${value}`)
@@ -26,6 +32,84 @@ const parseREPD = () => {
       } else if (context.column === 'Height of Turbines (m)') {
         return parseFloat(`${value}`)
       } else if (context.column === 'Planning Application Submitted') {
+        dateStr = `${value}`.split('/')
+        dateJSON = new Date(
+          Date.UTC(dateStr[2], dateStr[1] - 1, dateStr[0])
+        ).toJSON()
+        return dateJSON
+      } else if (context.column === 'Planning Application Withdrawn') {
+        dateStr = `${value}`.split('/')
+        dateJSON = new Date(
+          Date.UTC(dateStr[2], dateStr[1] - 1, dateStr[0])
+        ).toJSON()
+        return dateJSON
+      } else if (context.column === 'Planning Permission Refused') {
+        dateStr = `${value}`.split('/')
+        dateJSON = new Date(
+          Date.UTC(dateStr[2], dateStr[1] - 1, dateStr[0])
+        ).toJSON()
+        return dateJSON
+      } else if (context.column === 'Appeal Lodged') {
+        dateStr = `${value}`.split('/')
+        dateJSON = new Date(
+          Date.UTC(dateStr[2], dateStr[1] - 1, dateStr[0])
+        ).toJSON()
+        return dateJSON
+      } else if (context.column === 'Appeal Withdrawn') {
+        dateStr = `${value}`.split('/')
+        dateJSON = new Date(
+          Date.UTC(dateStr[2], dateStr[1] - 1, dateStr[0])
+        ).toJSON()
+        return dateJSON
+      } else if (context.column === 'Appeal Refused') {
+        dateStr = `${value}`.split('/')
+        dateJSON = new Date(
+          Date.UTC(dateStr[2], dateStr[1] - 1, dateStr[0])
+        ).toJSON()
+        return dateJSON
+      } else if (context.column === 'Appeal Granted') {
+        dateStr = `${value}`.split('/')
+        dateJSON = new Date(
+          Date.UTC(dateStr[2], dateStr[1] - 1, dateStr[0])
+        ).toJSON()
+        return dateJSON
+      } else if (context.column === 'Planning Permission Granted') {
+        dateStr = `${value}`.split('/')
+        dateJSON = new Date(
+          Date.UTC(dateStr[2], dateStr[1] - 1, dateStr[0])
+        ).toJSON()
+        return dateJSON
+      } else if (context.column === 'Secretary of State - Intervened') {
+        dateStr = `${value}`.split('/')
+        dateJSON = new Date(
+          Date.UTC(dateStr[2], dateStr[1] - 1, dateStr[0])
+        ).toJSON()
+        return dateJSON
+      } else if (context.column === 'Secretary of State - Refusal') {
+        dateStr = `${value}`.split('/')
+        dateJSON = new Date(
+          Date.UTC(dateStr[2], dateStr[1] - 1, dateStr[0])
+        ).toJSON()
+        return dateJSON
+      } else if (context.column === 'Secretary of State - Granted') {
+        dateStr = `${value}`.split('/')
+        dateJSON = new Date(
+          Date.UTC(dateStr[2], dateStr[1] - 1, dateStr[0])
+        ).toJSON()
+        return dateJSON
+      } else if (context.column === 'Planning Permission Expired') {
+        dateStr = `${value}`.split('/')
+        dateJSON = new Date(
+          Date.UTC(dateStr[2], dateStr[1] - 1, dateStr[0])
+        ).toJSON()
+        return dateJSON
+      } else if (context.column === 'Under Construction') {
+        dateStr = `${value}`.split('/')
+        dateJSON = new Date(
+          Date.UTC(dateStr[2], dateStr[1] - 1, dateStr[0])
+        ).toJSON()
+        return dateJSON
+      } else if (context.column === 'Operational') {
         dateStr = `${value}`.split('/')
         dateJSON = new Date(
           Date.UTC(dateStr[2], dateStr[1] - 1, dateStr[0])
